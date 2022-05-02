@@ -1,3 +1,13 @@
-.statName {
-  text-transform: capitalize;
+.list {
+  margin: 0;
+  padding: 10px;
+}
+
+.list > li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.list > li:last-child {
+  font-size: 18px;
+  font-weight: 500;
 }

@@ -1,15 +1,28 @@
-.btnWrapper {
-  margin-left: 15px;
-}
-.button {
-  border: 1px solid rgba(128, 128, 128, 0.5);
-  border-radius: 4px;
-  font-weight: 700;
-  text-transform: capitalize;
-  cursor: pointer;
-  background-color: #ffffff;
+.container {
+  padding: 10px;
+  border: 1px solid black;
+  width: max-content;
+  border-radius: 5px;
 }
 
-.button:not(:last-child) {
-  margin-right: 10px;
+.container > button {
+  background: #fff;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  transition: transform 100ms linear, background-color 250ms linear,
+    color 250ms linear;
+}
+
+.container > button:hover {
+  background-color: orange;
+  color: white;
+}
+
+.container > button:active {
+  transform: scale(1.1);
+}
+
+.container > button:not(:last-child) {
+  margin-right: 8px;
 }

@@ -1,22 +1,24 @@
-import PropTypes from 'prop-types';
 import s from './Statistics.module.css';
+import PropTypes from 'prop-types';
 
-const Statistics = ({ statistics }) => {
+export default function Statistics({ good, neutral, bad, total, percentage }) {
   return (
-    <ul>
-      {statistics.map(arr => (
-        <li key={arr[0]}>
-          <span className={s.statName}>{arr[0]}</span>: {arr[1]}
-        </li>
-      ))}
-    </ul>
+    <>
+      <ul className={s.list}>
+        <li>Good: {good}</li>
+        <li>Neutral: {neutral}</li>
+        <li>Bad: {bad}</li>
+        <li>Total: {total}</li>
+        <li>Positive feedback: {percentage + '%'}</li>
+      </ul>
+    </>
   );
-};
+}
 
 Statistics.propTypes = {
-  statistics: PropTypes.arrayOf(
-    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number]))
-  ).isRequired,
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  percentage: PropTypes.number.isRequired,
 };
-export default Statistics;
-

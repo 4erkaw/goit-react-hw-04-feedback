@@ -14,9 +14,8 @@ code {
     monospace;
 }
 
-h2,
 p {
-  margin-left: 15px;
+  margin: 0;
 }
 
 li {
