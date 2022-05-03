@@ -36,7 +36,10 @@ export class App extends Component {
     return (
       <>
         <Section title="Please leave your feedback">
-          <FeedbackOptions onFeedback={this.statIncrease} />
+          <FeedbackOptions
+            options={['Good', 'Neutral', 'Bad']}
+            onFeedback={this.statIncrease}
+          />
         </Section>
         <Section title="Statistics">
           {total > 0 ? (
