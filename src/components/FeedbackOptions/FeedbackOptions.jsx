@@ -22,6 +22,7 @@ export default function FeedbackOptions({ onFeedback, options }) {
 
 FeedbackOptions.propTypes = {
   onFeedback: PropTypes.func.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string.isRequired),
 };
 
 /* <button name="good" type="button" onClick={onFeedback}>
