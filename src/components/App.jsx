@@ -29,9 +29,9 @@ export default function App() {
   const countTotalFeedback = () => {
     return good + neutral + bad;
   };
+  const total = countTotalFeedback();
 
   const countPositiveFeedbackPercentage = () => {
-    const total = countTotalFeedback();
     return Math.round((good / total) * 100);
   };
 
@@ -49,7 +49,7 @@ export default function App() {
             good={good}
             neutral={neutral}
             bad={bad}
-            total={countTotalFeedback()}
+            total={total}
             percentage={countPositiveFeedbackPercentage()}
           />
         ) : (
